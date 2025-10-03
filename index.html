@@ -7,85 +7,125 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<a class="skip-link" href="#main-content">Перейти до основного контенту</a>
+<div class="layout">
+    <header class="header">
+        <h1 class="header__title">Мій перший лендінг</h1>
+        <nav class="nav">
+            <a class="nav__link" href="index.html">Головна</a>
+            <a class="nav__link" href="about.html">Про нас</a>
+            <a class="nav__link nav__link--cta" href="contacts.html">Контакти</a>
+        </nav>
+    </header>
 
-<header class="header">
-    <h1 class="header__title">Мій перший лендінг</h1>
-    <nav class="navigation">
-        <ul class="navigation__list">
-            <li class="navigation__item"><a class="navigation__link" href="index.html">Головна</a></li>
-            <li class="navigation__item"><a class="navigation__link" href="about.html">Про нас</a></li>
-            <li class="navigation__item"><a class="navigation__link" href="contacts.html">Контакти</a></li>
-        </ul>
-    </nav>
-</header>
+    <aside class="sidenav">
+        <section class="links">
+            <h3 class="links__title">Корисні посилання</h3>
+            <ul class="links__list">
+                <li class="links__item"><a class="links__link" href="https://developer.mozilla.org/">MDN Web Docs</a></li>
+            </ul>
+        </section>
+        <section class="values">
+            <h3 class="values__title">Цінності</h3>
+            <ul class="values__list">
+                <li class="values__item">Якість коду та прозорість</li>
+                <li class="values__item">Навчання через практику</li>
+                <li class="values__item">Комунікація та підтримка</li>
+            </ul>
+        </section>
+        <section class="social">
+            <h3 class="social__title">Соціальні мережі</h3>
+            <ul class="social__list">
+                <li class="social__item"><a class="social__link" href="#">Facebook</a></li>
+                <li class="social__item"><a class="social__link" href="#">Instagram</a></li>
+                <li class="social__item"><a class="social__link" href="#">LinkedIn</a></li>
+            </ul>
+        </section>
+    </aside>
 
-<main class="main" id="main-content">
-    <article class="article">
-        <h2 class="article__title">Новини</h2>
-        <p class="article__text">Дзюман Максим Андрійович почав роботу над HTML-каркасом.</p>
-        <figure class="media article__media media--framed">
-            <img
-                    class="media__img"
-                    src="assets/images/placeholder.jpg"
-                    alt="Фото студента"
-                    width="640px"
-                    loading="lazy"
-                    decoding="async"
-            />
-            <figcaption class="media__caption">Це зображення для новини</figcaption>
-        </figure>
-    </article>
+    <main class="main">
+        <section class="news">
+            <h2 class="news__title">Останні новини</h2>
+            <ul class="news__list">
+                <li class="news__card">
+                    <figure class="media">
+                        <img
+                                class="media__img"
+                                src="assets/images/placeholder.jpg"
+                                alt="Зображення для новини 1"
+                                width="640px"
+                                loading="lazy"
+                                decoding="async"
+                        />
+                    </figure>
+                    <h3 class="news__card-title">Дзюман Максим Андрійович розпочав роботу над лабораторною №4</h3>
+                    <p class="news__card-text">Команда вивчає CSS layouts з Flexbox та Grid, будуючи каркас сторінки.</p>
+                    <div class="news__meta">
+                        <time class="news__date" datetime="2025-10-01">1 жовтня 2025</time>
+                        <a class="news__link" href="#">Читати далі</a>
+                    </div>
+                </li>
+                <li class="news__card">
+                    <figure class="media">
+                        <img
+                                class="media__img"
+                                src="assets/images/placeholder.jpg"
+                                alt="Зображення для новини 2"
+                                width="640px"
+                                loading="lazy"
+                                decoding="async"
+                        />
+                    </figure>
+                    <h3 class="news__card-title">Практика з Flexbox та Grid</h3>
+                    <p class="news__card-text">Успішно реалізовано глобальний layout з grid-areas та компонування контенту flex'ом.</p>
+                    <div class="news__meta">
+                        <time class="news__date" datetime="2025-10-02">2 жовтня 2025</time>
+                        <a class="news__link" href="#">Читати далі</a>
+                    </div>
+                </li>
+                <li class="news__card">
+                    <figure class="media">
+                        <img
+                                class="media__img"
+                                src="assets/images/placeholder.jpg"
+                                alt="Зображення для новини 3"
+                                width="640px"
+                                loading="lazy"
+                                decoding="async"
+                        />
+                    </figure>
+                    <h3 class="news__card-title">Плани на JavaScript та React</h3>
+                    <p class="news__card-text">Наступні лабораторні фокусуватимуться на динамічному контенті з JS та фреймворками.</p>
+                    <div class="news__meta">
+                        <time class="news__date" datetime="2025-10-03">3 жовтня 2025</time>
+                        <a class="news__link" href="#">Читати далі</a>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </main>
 
-    <section class="advantages">
-        <h2 class="advantages__title">Наші переваги</h2>
-        <ul class="advantages__list">
-            <li class="advantages__item">Сучасні технології фронтенду</li>
-            <li class="advantages__item">Командна робота та менторинг</li>
-            <li class="advantages__item">Практика на реальних кейсах</li>
-        </ul>
-    </section>
-
-    <section class="services">
-        <h2 class="services__title">Наші послуги</h2>
-        <table class="services__table">
-            <thead>
-            <tr class="services__row">
-                <th class="services__header">Послуга</th>
-                <th class="services__header">Опис</th>
-                <th class="services__header">Ціна</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr class="services__row">
-                <td class="services__cell">Розробка сайту</td>
-                <td class="services__cell">Лендінг або невеликий корпоративний сайт</td>
-                <td class="services__cell">500 $</td>
-            </tr>
-            <tr class="services__row">
-                <td class="services__cell">SEO-оптимізація</td>
-                <td class="services__cell">Базовий аудит та покращення видимості</td>
-                <td class="services__cell">300 $</td>
-            </tr>
-            <tr class="services__row">
-                <td class="services__cell">Підтримка</td>
-                <td class="services__cell">Оновлення та технічна допомога</td>
-                <td class="services__cell">100 $ / місяць</td>
-            </tr>
-            </tbody>
-        </table>
-    </section>
-</main>
-
-<aside class="aside">
-    <h3 class="aside__title">Корисні посилання</h3>
-    <ul class="aside__list">
-        <li class="aside__item"><a class="aside__link" href="https://developer.mozilla.org/">MDN Web Docs</a></li>
-    </ul>
-</aside>
-
-<footer class="footer">
-    <p class="footer__text">© 2025 Група 6.1213-пі-2</p>
-</footer>
+    <footer class="footer">
+        <div class="footer__inner">
+            <p class="footer__text">© 2025 Група <span class="footer__group-name">6.1213-пі-2</span></p>
+            <address class="footer__contacts">
+                <h4 class="footer__contacts-title">Наші контакти</h4>
+                <ul class="footer__contacts-list">
+                    <li class="footer__contacts-item">
+                        <span class="footer__label">Email:</span>
+                        <a class="footer__link" href="mailto:example@mail.com">example@mail.com</a>
+                    </li>
+                    <li class="footer__contacts-item">
+                        <span class="footer__label">Телефон:</span>
+                        <a class="footer__link" href="tel:+380501234567">+38 (050) 123-45-67</a>
+                    </li>
+                    <li class="footer__contacts-item">
+                        <span class="footer__label">Адреса:</span>
+                        <span>м. Запоріжжя, вул. Університетська, 65</span>
+                    </li>
+                </ul>
+            </address>
+        </div>
+    </footer>
+</div>
 </body>
 </html>
