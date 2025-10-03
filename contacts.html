@@ -7,64 +7,82 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<a class="skip-link" href="#main-content">Перейти до основного контенту</a>
+<div class="layout">
+    <header class="header">
+        <h1 class="header__title">Мій перший лендінг</h1>
+        <nav class="nav">
+            <a class="nav__link" href="index.html">Головна</a>
+            <a class="nav__link" href="about.html">Про нас</a>
+            <a class="nav__link nav__link--cta" href="contacts.html">Контакти</a>
+        </nav>
+    </header>
 
-<header class="header">
-    <h1 class="header__title">Мій перший лендінг</h1>
-    <nav class="navigation">
-        <ul class="navigation__list">
-            <li class="navigation__item"><a class="navigation__link" href="index.html">Головна</a></li>
-            <li class="navigation__item"><a class="navigation__link" href="about.html">Про нас</a></li>
-            <li class="navigation__item"><a class="navigation__link" href="contacts.html">Контакти</a></li>
-        </ul>
-    </nav>
-</header>
+    <aside class="sidenav">
+        <section class="links">
+            <h3 class="links__title">Корисні посилання</h3>
+            <ul class="links__list">
+                <li class="links__item"><a class="links__link" href="https://developer.mozilla.org/">MDN Web Docs</a></li>
+            </ul>
+        </section>
+        <section class="values">
+            <h3 class="values__title">Цінності</h3>
+            <ul class="values__list">
+                <li class="values__item">Якість коду та прозорість</li>
+                <li class="values__item">Навчання через практику</li>
+                <li class="values__item">Комунікація та підтримка</li>
+            </ul>
+        </section>
+        <section class="social">
+            <h3 class="social__title">Соціальні мережі</h3>
+            <ul class="social__list">
+                <li class="social__item"><a class="social__link" href="#">Facebook</a></li>
+                <li class="social__item"><a class="social__link" href="#">Instagram</a></li>
+                <li class="social__item"><a class="social__link" href="#">LinkedIn</a></li>
+            </ul>
+        </section>
+    </aside>
 
-<main class="main" id="main-content">
-    <h1 class="main__title">Зв'яжіться з нами</h1>
+    <main class="main">
+        <form class="contact-form">
+            <h2 class="contact-form__title">Зв'яжіться з нами</h2>
+            <div class="contact-form__item">
+                <label class="contact-form__label" for="name">Ім'я</label>
+                <input class="contact-form__input" type="text" id="name" required placeholder="Ваше ім'я">
+            </div>
+            <div class="contact-form__item">
+                <label class="contact-form__label" for="email">Email</label>
+                <input class="contact-form__input" type="email" id="email" required placeholder="Ваш email">
+            </div>
+            <div class="contact-form__item">
+                <label class="contact-form__label" for="message">Повідомлення</label>
+                <textarea class="contact-form__textarea" id="message" required placeholder="Ваше повідомлення"></textarea>
+            </div>
+            <button class="contact-form__button" type="submit">Надіслати</button>
+        </form>
+    </main>
 
-    <form class="contact-form">
-        <h3 class="contact-form__title">Форма зворотного зв'язку</h3>
-        <div class="contact-form__item">
-            <label class="contact-form__label" for="name">Ім'я</label>
-            <input class="contact-form__input" type="text" id="name" required placeholder="Ваше ім'я">
+    <footer class="footer">
+        <div class="footer__inner">
+            <p class="footer__text">© 2025 Група <span class="footer__group-name">6.1213-пі-2</span></p>
+            <address class="footer__contacts">
+                <h4 class="footer__contacts-title">Наші контакти</h4>
+                <ul class="footer__contacts-list">
+                    <li class="footer__contacts-item">
+                        <span class="footer__label">Email:</span>
+                        <a class="footer__link" href="mailto:example@mail.com">example@mail.com</a>
+                    </li>
+                    <li class="footer__contacts-item">
+                        <span class="footer__label">Телефон:</span>
+                        <a class="footer__link" href="tel:+380501234567">+38 (050) 123-45-67</a>
+                    </li>
+                    <li class="footer__contacts-item">
+                        <span class="footer__label">Адреса:</span>
+                        <span>м. Запоріжжя, вул. Університетська, 65</span>
+                    </li>
+                </ul>
+            </address>
         </div>
-        <div class="contact-form__item">
-            <label class="contact-form__label" for="email">Email</label>
-            <input class="contact-form__input" type="email" id="email" required placeholder="Ваш email">
-        </div>
-        <div class="contact-form__item">
-            <label class="contact-form__label" for="phone">Телефон</label>
-            <input class="contact-form__input" type="tel" id="phone" placeholder="Ваш телефон">
-        </div>
-        <div class="contact-form__item">
-            <label class="contact-form__label" for="message">Повідомлення</label>
-            <textarea class="contact-form__textarea" id="message" required placeholder="Ваше повідомлення"></textarea>
-        </div>
-        <button class="contact-form__button" type="submit">Надіслати</button>
-    </form>
-
-    <section class="contacts">
-        <h3 class="contacts__title">Наші контакти</h3>
-        <address class="contacts__address">
-            <p class="contacts__text">Email: example@mail.com</p>
-            <p class="contacts__text">Телефон: +38 (050) 123-45-67</p>
-            <p class="contacts__text">Адреса: м. Запоріжжя, вул. Університетська, 65</p>
-        </address>
-    </section>
-</main>
-
-<section class="social">
-    <h3 class="social__title">Соціальні мережі</h3>
-    <ul class="social__list">
-        <li class="social__item"><a class="social__link" href="#">Facebook</a></li>
-        <li class="social__item"><a class="social__link" href="#">Instagram</a></li>
-        <li class="social__item"><a class="social__link" href="#">LinkedIn</a></li>
-    </ul>
-</section>
-
-<footer class="footer">
-    <p class="footer__text">© 2025 Група 6.1213-пі-2</p>
-</footer>
+    </footer>
+</div>
 </body>
 </html>
